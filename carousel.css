@@ -1,0 +1,160 @@
+:root {
+  --multiple: 300px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.enableSnap {
+  scroll-snap-type: y mandatory;
+}
+
+.snap {
+  scroll-snap-align: start;
+}
+
+.image {
+  width: 500px;
+  aspect-ratio: 0.64;
+  user-select: none;
+}
+
+.carousel_images {
+  display: flex;
+  transition: transform 150ms ease;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  height: 94.7%;
+}
+
+.bg-pri{
+  background-color: gainsboro;
+}
+
+.carousel_inner {
+  position: relative;
+  width: 500px;
+  aspect-ratio: 0.64;
+  overflow: hidden;
+  box-shadow: 0rem 0rem 10rem 1rem rgba(255, 0, 0, 0.164);
+}
+
+.carousel_btn {
+  position: absolute;
+  width: 3rem;
+  aspect-ratio: 1;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+
+.lBtn {
+  left: 10px;
+}
+.rBtn {
+  right: 10px;
+}
+
+.details {
+  min-width: 500px;
+  max-height: 781.25px;
+  flex-basis: 0;
+  background: rgba(23, 10, 110, 0.808);
+  box-shadow: 0rem 0rem 10rem 1rem rgba(255, 0, 0, 0.164);
+  color: #eee;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 2500px;
+  height: inherit;
+  display: flex;
+  gap: 0;
+  transition: transform 150ms ease-in-out;
+}
+
+.details h1 {
+  text-align: center;
+}
+
+.op,
+.B,
+.N,
+.CM,
+.DS {
+  min-width: 450px;
+  height: 731.25px;
+  margin-inline: 25px;
+  margin-block: 25px;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top_carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.top_carousel_images {
+  display: flex;
+  transition: transform 250ms ease;
+}
+
+.top_image {
+  width: 300px;
+  aspect-ratio: 0.64;
+  user-select: none;
+}
+
+.top_btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 100%;
+  z-index: 1;
+  user-select: none;
+}
+
+.l_top {
+  left: 0;
+}
+
+.r_top {
+  right: 0;
+}
+.l_top:hover,
+.r_top:hover {
+  background: #0000004b;
+  cursor: pointer;
+}
+
+.content_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.content_grid > div > img {
+  width: 300px;
+  aspect-ratio: 0.64;
+}
+
+.content_grid > div > p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}

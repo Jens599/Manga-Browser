@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using CSS Custom Properties</title>
+    <style>
+      /* Define the custom property */
+      :root {
+        --floor: 300;
+      }
+
+      /* Use the custom property to set the background color */
+      body {
+        background-color: #f0f0f0;
+      }
+
+      /* Use the custom property to set the height of the element */
+      .element {
+        height: var(--floor) px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      /* Override the custom property for a specific element */
+      #special-element {
+        --floor: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element">This element has a height of var(--floor)px.</div>
+    <div id="special-element" class="element">
+      This element has a special height of var(--floor)px.
+    </div>
+  </body>
+
+</html>
